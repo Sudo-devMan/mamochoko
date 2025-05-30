@@ -1,1 +1,1 @@
-# mamochoko
+# Mamochoko Secondary School Website
