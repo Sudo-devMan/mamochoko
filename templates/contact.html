@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Contact us{% endblock %}
+
+{% block body %}
+    
+    <center>
+        <h1 class="display-3 m-5">Get in touch</h1>
+
+        <div class="container container-fluid p-5">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 text-center">
+                        <img src="{% static 'imgs/email.jpg' %}" class="card-img-top mx-auto" style="width: 12em" alt="Email">
+                        <div class="card-body">
+                            <h3>EMAIL</h3>
+                            <p class="card-text">mamochokos@gmail.com</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 text-center">
+                        <img src="{% static 'imgs/phone.jpg' %}" class="card-img-top mx-auto" style="width: 12em" alt="Phone">
+                        <div class="card-body">
+                            <h3>PHONE</h3>
+                            <p class="card-text">School telephone number: <br> 066 559 8863</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card shadow p-3 mb-4 text-center">
+                        <img src="{% static 'imgs/location.jpg' %}" class="card-img-top mx-auto" style="width: 12em" alt="Location">
+                        <div class="card-body">
+                            <h3>ADDRESS</h3>
+                            <p>Moletjie, Ga-kobo, stand no. 406
+                            PO BOX 3192 <br> KOLOTI <br> 0709</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <a class="text-decoration-none" href="#">
+                    <div class="card shadow p-3 mb-4 text-center">
+                        <img src="{% static 'imgs/facebook.png' %}" class="card-img-top mx-auto" style="width: 12em" alt="Location">
+                        <div class="card-body">
+                            <h3>Facebook</h3>
+                            Mamochoko Facebook Page <br>
+                            <i class="text-muted">*click icon*</i>
+                        </div>
+                    </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </center>
+
+{% endblock %}

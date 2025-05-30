@@ -1,0 +1,170 @@
+
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} About {% endblock %}
+
+{% block body %}
+
+<style>
+    .about-child, about-child h5{
+        padding: 1em;
+        border-radius: .7em;
+        margin: .8em 2.3em;
+        font-size: .8rem;
+    }
+    .highlight2{
+        color: #00f;
+    }
+    h3, h4{
+        font-weight: bold;
+    }
+    .about-child:nth-child(1){
+        background-color: #069906;
+        color: #fff;
+    }
+    .about-child:nth-child(2){
+        background-color: #ff9606;
+        color: #fff;
+    }
+    .about-child:nth-child(3){
+        background-color: #9606ff;
+        color: #fff;
+    }
+    .about-child:nth-child(4){
+        background-color: #5699ff;
+        color: #fff;
+    }
+    .about-body{
+        display: none;
+    }
+    .about-child:hover .about-body{
+        display: block;
+    }
+    .sideways{
+        transform: rotate(90deg);
+        font-size: 2.2rem;
+    }
+    #logo{
+        transform: translateY(-3em);
+    }
+    #uniform{
+        overflow-x: auto;
+        white-space: nowrap;
+        padding: 1.3em;
+    }
+    #uniform img{
+        display: inline-block;
+        border-radius: .4em;
+        margin: 1.2em;
+        width: 60%;
+        box-shadow: .1em .1em .1em .1em #9c212199;
+    }
+    
+    .caret{
+        transform: rotate(100deg);
+    }
+    
+   /* #child1{
+        transform: rotate(90deg) translateY(10.4em);
+    }*/
+    
+</style>
+
+    <center class="p-5">
+        <h2 class="display-3 color m-2 mb-4">About us</h2>
+        <p>Mamochoko Secondary School, situated at Stand 406, Moletjie, Ga-Kobo Village, operates as a public secondary school within the Ga-Kobo, Polokwane rural suburb of Limpopo Province, South Africa. It falls under the Capricorn North District, Bahlaloga circuit.</p>
+    </center>
+    
+    
+    <center>
+        <img id="logo" src="{% static 'imgs/mamochoko.jpg' %}" alt="Mamochoko logo" width="210">
+        <!-----<h1 style="opacity: .7; font-size: 5.6rem" id="text" class="color sideways">About us</h1>---->
+    </center>
+    
+    
+    <div class="about-block">
+        <div id="child1" class="about-child">
+            <h3 class="">Birth of Mamochoko <span class="caret">></span></h3>
+            <div class="about-body">
+                <p>Mamochoko-Secondary-School was established in 2016 by community members who wanted to reduce the distance that their children took when they travelled to school. The school was able to advance at a very fast pace, and it were able to recruit a team of expert teachers that provide quality teaching.</p>
+            </div>
+        </div>
+        
+        <div id="child2" class="about-child">
+            <h3 class=" ">Fun fact(s) <span class="caret">></span></h3>
+            <div class="about-body">
+            <ul style="list-style-type: none;">
+                <li>1. The name of our school is actually an acronym that stands for the 4 villages that are situated near and/or around the school. <br>
+                <span class="highlight2">Ma</span> - Mashita <br>
+                <span class="highlight2">mo</span> - Mokgonyana <br>
+                <span class="highlight2">cho</span> - Chokoe <br>
+                <span class="highlight2">ko</span> - Kobo <br>
+                </li>
+            </ul>
+            </div>
+        </div>
+        
+        <div id="child3" class="about-child">
+            <h3 class=" ">School times <span class="caret">></span></h3>
+            <div class="about-body">
+            07:00 - Porridge break<br>
+            07:30 - School starts. <br>
+            10:45 - Lunch break. <br>
+            11:30 - End of Lunch break. <br>
+            14:30 - After school. <span class="text-muted vs-text">(Grades 11 & 12 stay for extra lessons till 16:30)</span>
+        </div>
+        </div>
+        
+        <div id="child4" class="about-child">
+            <h3 class="">Subjects/Streams <span class="caret">></span></h3>
+            <div class="about-body">
+                <h4 class="">Grades 8-9:</h4>English FAL, <br>Sepedi HL,<br> Geography, <br>History, <br>Natural Sciences, <br>Creative Arts, <br>Technology, <br>Economics and Management Sciences, <br>Mathematics. <br><br> <hr> <br>
+                <h4>Grades 10 - 12:</h4>
+                <div id="streams">
+                    <div class="stream">
+                        <h5>General:</h4>
+                        Agricultural Sciences <br>
+                        Geography <br>
+                        Mathematical Literacy <br>
+                        Life Sciences <br>
+                        English FAL <br>
+                        Sepedi HL <br>
+                        Life Orientation
+                    </div>
+                    <div class="stream"> <br>
+                        <h5 class=" ">Sciences:</h4>
+                        Physical Sciences <br>
+                        Geography <br>
+                        Mathematics <br>
+                        Life Sciences <br>
+                        English FAL <br>
+                        Sepedi HL <br>
+                        Life Orientation
+                    </div>
+                    <br>
+                    <h5 class="color vs-text text-muted">Learners are free to ask teachers or parents <br> for advise when choosing streams. <br> However, this should not always be the case <br> as a learner should follow his or her interest.</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <center class="p-5 m-1">
+        <h1 class="display-5 color">What do we wear?</h1>
+        <p>Yes, our <span class="color">learners wear uniform</span>. This eforces our <span class="color">identity</span> as Mamochoko and fosters a sense of <span class="color">equality</span> among our learners. You can purchase it at <span class="color">Phofu, Polokwane</span>. Gaze at a few examples.</p>
+    </center>
+    
+    <center>
+        <h3 class="color display-6">Samples</h3>
+    </center>
+    <div style="white-space: nowrap; overflow-x: auto" id="uniform">
+        <img class="shadow col-6 m-2" src="{% static 'imgs/sample.jpg' %}" alt="picture of uniform">
+        <img class="shadow col-6 m-2" src="{% static 'imgs/sample.jpg' %}" alt="picture of uniform">
+        <img class="shadow col-6 m-2" src="{% static 'imgs/sample.jpg' %}" alt="picture of uniform">
+        <img class="shadow col-6 m-2" src="{% static 'imgs/sample.jpg' %}" alt="picture of uniform">
+        <img class="shadow col-6 m-2" src="{% static 'imgs/sample.jpg' %}" alt="picture of uniform">
+    </div>
+    
+    <script>
+        const caret = document.querySelectorAll('.caret');
+    </script>
+{% endblock %}

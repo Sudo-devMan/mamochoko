@@ -1,0 +1,282 @@
+
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'css/bootstrap.css' %}">
+<script src="{% static 'css/bootstrap.js' %}"></script>
+<link rel="stylesheet" href="{% static 'css/base.css' %}">
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <title>Mamochoko | {% block title %}{% endblock %}</title>
+</head>
+<body>
+    <header>
+        <nav style="background-color: #545454; border-bottom: .2em solid #9c2121" class="navbar navbar-expand-lg navbar-dark">
+            <div class="container-fluid">
+              <a style="font-size: 2rem; font-weight: bold;" class="navbar-brand color-light" href="/">Mamochoko</a>
+              <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                  <a class="nav-link active" aria-current="page" href="/">Home</a>
+                  <a class="nav-link" href="about">About</a>
+                 <!--  <a class="nav-link" href="results">Results</a> -->
+                  <a class="nav-link" href="contact">Contact</a>
+                  <a href="faq" class="nav-link">FAQ</a>
+                </div>
+              </div>
+            </div>
+          </nav>
+    </header>
+
+{% block body %}
+    <main>
+        
+        <!--
+            TODO
+                INTRO IMAGE with register button and some about info
+                mission vission blocks
+                footer
+        -->
+        <center>
+            <div style="border-bottom: .3em solid #9c2121; background-image: url({% static 'imgs/intro-img.jpg' %}); background-size: cover; background-repeat: no-repeat; height: 80vh" class="h-lg-100">
+                <br>
+                <br><br>
+                <br><h1 style="font-size: 4.5rem; color: #fff" class="h1">Preparing future <span class="color">Leaders</span></h1>
+                <br><br>
+                <br>
+                <h5 style="bottom: 0" class="text-light w-75">The school is dedicated to providing quality education, fostering academic excellence and holistic development.</h5> <br>
+                <a id="registerBtn" style="bottom: 0; background-color: #9c2121; color: #fafafa; font-size: 1.5rem" href="" class="btn btn-default btn-md">Register</a> <br><br>
+            </div>
+        </center>
+        <br><br>
+        <center>
+        <h1 class="display-3 mt-2 mb-1 color">Mission & Vision</h1>
+        </center>
+        <br>
+        <div class="container-mv shadow">
+            <h3>Mission</h3>
+            <p>Motivate staff and members on a continuous basis in order to promote the spirit of learning and teaching to produce <span class="color">high quality</span> education.</p>
+        </div>
+        <div class="container-mv shadow">
+            <h3>Vision</h3>
+            <p>To equipt our learners with high education that will provide skill, knowledge and values necessary to produce coping marketable citizens.</p>
+        </div>
+        
+        
+        
+        
+        
+        
+       <!---->
+
+<style>
+    .container img{
+        width: 100%;
+    }
+    /*table{
+        border: .09em solid #212529;
+    }
+    table tr{
+        padding: .2em;
+        border: .09em solid #212529;
+    }
+    table tr td,th{
+        border: .2em solif #212529;
+        padding: 1em;
+    }*/
+    .center{
+        padding: 2em;
+    }
+</style>
+
+<center class="mt-3">
+    <br>
+    <br>
+    <br>
+    <h1 class="display-3 mt-2 mb-1 color">Matric Results</h1>
+    <p class="w-75">Below is a bar graph illustrating our matric results since the year of our first matrics (2019).</p>
+</center>
+
+<div class="container p-5">
+    <img src="{% static 'imgs/matric.png' %}" alt="Graph of mathic results">
+</div>
+
+<center class="m-3 mb-5">
+    <h1 class="display-5 color">Results in detail</h1>
+    <p>For more detailed results you can take a look at the table below.</p>
+</center>
+
+<style>
+    table{
+        width: 85%;
+        margin: 2em;
+    }
+    table tr,th,td{
+        padding: .4em;
+        border: .01em solid #212529;
+        background-color: #ffe7e7;
+    }
+</style>
+
+<div id="resultsTable">
+    <center>
+    <table class="">
+        <thead>
+        <tr>
+            <th>Year</th>
+            <th>Learners wrote</th>
+            <th>Learners passed</th>
+            <th>Pass rate</th>
+            <th>Circuit Position</th>
+        </tr>
+        </thead>
+        
+        <tbody>
+        {% for result in results %}
+        <tr>
+            <td>{{ result.year }}</td>
+            <td>{{ result.wrote }}</td>
+            <td>{{ result.passed }}</td>
+            <td>{{ result.pass_rate }}%</td>
+            <td>{{ result.position }}</td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+    </center>
+</div>
+
+<!---->
+        
+        
+        
+        
+        
+        
+        
+        <br>
+        <br>
+        <a style="display: flex; justify-self: center; align-self: center" href="{% url 'about' %}" class="btn shadow btn-default btn-sm text-decoration-underline rounded-3">Learn more</a>
+        <br>
+        <br>
+        <br>
+        
+    </main>
+{% endblock %}
+
+{% block footer %}
+<!----FOOTER STYLES---->
+<style type="text/css" media="all">
+    *{
+        padding: 0;
+        margin: 0;
+    }
+    footer{
+        padding: .8em;
+        background-color: #212529;
+        color: #E5E6FF;
+        border-top: .2em solid #9c2121;
+    }
+    .innfo{
+        font-size: .8rem;
+        opacity: .8;
+    }
+    
+    .additional-info{
+        margin: .7em;
+        margin-bottom: 1.4em;
+    }
+    
+    strong, h4{
+        color: #e8e8e8;
+    }
+    h4{
+        margin-bottom: .2em;
+        font-size: 1rem;
+        color: #fff;
+    }
+    
+    footer nav a{
+        font-size: .8rem;
+        color: #00ffff;
+    }
+    
+    #devman{
+        font-size: .8em;
+        padding: ;
+    }
+    
+</style>
+
+<footer>
+    <h3>Mamochoko Secondary School</h3>
+    
+    <center class="p-3">
+        <nav>
+            <a href="/">Home</a> | 
+            <a href="about">About</a> | 
+           <!--  <a href="results">Results</a> |  -->
+            <a href="contact">Contact</a> | 
+            <a href="faq">FAQ</a>
+        </nav>
+    </center>
+    
+    <div class="innfo">
+        <div class="additional-info">
+            <h4>Location & Contact</h4>
+            <strong>Address:</strong> Stand 406, Ga-Kobo Village, Moletjie, Polokwane, Limpopo, South Africa
+            <br><strong>District:</strong> Capricorn North
+            <br><strong>Circuit:</strong> Bahlaloga
+            <br><strong>EMIS Number:</strong> 992205102
+            <br><strong>Examination Number:</strong> 414220
+            <br><strong>Persal Paypoint:</strong> 414220
+            <br><strong>Facebook:</strong> <a href="#">Mamochoko FB page</a>
+        </div>
+        
+        <div class="additional-info">
+            <h4>School Classification:</h4>
+            <strong>Type:</strong> Public Secondary School
+            <br><strong>Specialisation:</strong> Ordinary
+            <br><strong>Quintile Level:</strong> 2 (No-fee school)
+            <br><strong>Funding:</strong> Eligible to receive government operational funding
+        </div>
+        
+        <div class="additional-info">
+            <h4>Admission Process:</h4>
+            Required Documents: <br>
+            Certified birth certificate copy <br>
+            Parent/guardian ID <br>
+            Proof of residence <br />
+            Last report card (if transferring)
+        </div>
+    </div>
+    <br>
+    <center>
+        <span>Copyright &copy; <span id="year"></span></span> <br>
+        <span id="devman">Developed by Devman (WhatsApp: +27 72 072 7038)</span>
+    </center>
+    
+</footer>
+{% endblock %}
+    <script>
+        document.getElementById('year').textContent = new Date().getFullYear();
+        const registerBtn = document.getElementById('registerBtn');
+        // I'll deal with this later...
+        registerBtn.onclick = () => {
+            alert("Error fetching registration form. Please try again later.")
+        }
+    </script>
+    <script src="{% static 'css/bootstrap.js' %}"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    
+</body>
+</html>

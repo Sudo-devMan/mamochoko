@@ -1,0 +1,24 @@
+
+{% extends 'base.html' %}
+{% block title %} Frequently Asked Questions {% endblock %}
+
+{% block body %}
+
+<center>
+    <h1 class="display-3 m-3 color">Frequently Asked Questions</h1>
+</center>
+
+{% for faq in faqs %}
+<div class="question m-5 p-3 container-border border shadow">
+    <h3 class="mb-2 text-decoration-underline">{{faq.question}}?</h3>
+    <p>{{faq.answer}}</p>
+</div>
+{% endfor %}
+
+<style>
+    
+</style>
+
+{% endblock %}
+{% block footer %}
+{% endblock %}

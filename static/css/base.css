@@ -1,0 +1,64 @@
+
+@font-face{
+    font-family: "parkinsbro";
+    src: url(Parkinsans.ttf)
+}
+
+:root{
+    --h-color: #9c2121;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "parkinsbro";
+}
+
+.color{
+    color: var(--h-color);
+}
+.color-light{
+    color: #cf6565;
+}
+.vs-text{
+    font-size: .7rem;
+}
+
+
+footer{
+    color: #fff
+}
+/*.introductory{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}*/
+
+.container-mv{
+    /*width: 70%;*/
+    border-radius: .4em;
+    padding: 1em;
+    margin: 2em;
+}
+.container-mv h3{
+    color: #9c2121;
+}
+
+.display-7{
+    font-size: 1.5rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+.display-8{
+    font-size: 1.1rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.about-child{
+    padding: 1em;
+    border-radius: 1em;
+    width: 80%;
+    box-sizing: inherit;
+}
